@@ -2,7 +2,7 @@ import ReactDOM from "react-dom";
 import GlobalProvider from "context/GlobalContext";
 import Theme from "theme/theme";
 import GlobalStyle from "theme/globalStyle";
-import App from "./app";
+import App from "./App";
 import "reset-css";
 
 import reportWebVitals from "./reportWebVitals";
