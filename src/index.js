@@ -1,20 +1,19 @@
-import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import GlobalProvider from "context/GlobalContext";
 import Theme from "theme/theme";
+import GlobalStyle from "theme/globalStyle";
 import App from "./app";
 import "reset-css";
 
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
-  <StrictMode>
-    <GlobalProvider>
-      <Theme>
-        <App />
-      </Theme>
-    </GlobalProvider>
-  </StrictMode>,
+  <GlobalProvider>
+    <Theme>
+      <GlobalStyle />
+      <App />
+    </Theme>
+  </GlobalProvider>,
   document.getElementById("root")
 );
 
