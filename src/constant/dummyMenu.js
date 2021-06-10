@@ -11,7 +11,15 @@ export const COLUMNS_SIDEBAR = {
     {
       submenu: "Configuración",
       icon: <SettingOutlined />,
-      childrens: [{ key: "z", label: "Configuración", to: "", type: "logout" }],
+      childrens: [
+        {
+          key: "z",
+          label: "Cerrar sesión",
+          to: "",
+          type: "logout",
+          onClick: true,
+        },
+      ],
     },
   ],
 };

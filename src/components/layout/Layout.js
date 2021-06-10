@@ -53,6 +53,8 @@ const Layout = memo(({ children }) => {
 
   const logoutSesion = async () => {
     try {
+      console.log({ gContext });
+
       gContext.setUser(undefined);
       history.push("/identificate");
     } catch (error) {
@@ -71,6 +73,8 @@ const Layout = memo(({ children }) => {
   };
 
   const handleAction = (type) => {
+    console.log({ type });
+
     if (type === "logout") {
       handleLogout();
     }
