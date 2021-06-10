@@ -1,25 +1,24 @@
 import { useState, createContext, useContext } from "react";
+import { setLocalStorage, getLocalStorage } from "helpers";
+import { USER_AUTH } from "constant";
 
 const GlobalContext = createContext();
 
 export default ({ children }) => {
-  const [parentalControlData, setParentalControlData] = useState(null);
-  const [parentalControlModalVisible, setParentalControlModalVisible] =
-    useState(false);
+  const [user, _setUser] = useState(getLocalStorage({ type: USER_AUTH }));
 
-  const toggleParentalControlModal = (data) => {
-    setParentalControlData(data);
-    setParentalControlModalVisible(!parentalControlModalVisible);
+  const setUser = (currentUser) => {
+    _setUser(currentUser);
+    setLocalStorage({ type: USER_AUTH, dataSource: currentUser });
   };
 
   return (
     <GlobalContext.Provider
       value={{
         // getters
-        parentalControlData,
-        parentalControlModalVisible,
+        user,
         // setters
-        toggleParentalControlModal,
+        setUser,
       }}
     >
       {children}
