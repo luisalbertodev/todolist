@@ -10,10 +10,10 @@ export const breakpoints = {
 };
 
 const defaultColors = {
-  primary: "#151515",
-  primaryHover: "#f4db3a",
-  secondary: "#464646",
-  secondaryHover: "#f4db3a",
+  primary: "#42aced",
+  primaryHover: "#256993",
+  secondary: "#437b9e",
+  secondaryHover: "#293252",
   light: "#F2F2F2",
   dark: "#2b3940",
   yellow: "#fedc5a",
